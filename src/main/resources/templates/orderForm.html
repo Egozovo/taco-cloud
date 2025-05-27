@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
     <title>Taco Cloud</title>
     <link rel="stylesheet" th:href="@{/styles.css}" />
@@ -8,7 +8,7 @@
 <body>
 <form method="POST" th:action="@{/orders}" th:object="${tacoOrder}">
     <h1>Order your taco creations!</h1>
-    <img th:src="@{/images/Chill.jpeg}"/>
+    <img th:src="@{/images/Chill.jpeg}" alt="sorry :("/>
 
     <h3>Your tacos in this order:</h3>
 
@@ -21,8 +21,10 @@
 
     <h3>Deliver my taco masterpieces to...</h3>
 
-    <label for="deliveryName">Name: </label>
-    <input type="text" th:field="*{deliveryName}"/>
+
+    <label for="deliveryName">Name:
+        <input type="text" th:field="*{deliveryName}"/>
+    </label>
 
     <br/>
 
