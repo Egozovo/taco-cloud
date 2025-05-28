@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/tacocloud
