@@ -6,3 +6,6 @@ spring:
     password: postgres
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/tacocloud
+  sql:
+    init:
+      mode: always

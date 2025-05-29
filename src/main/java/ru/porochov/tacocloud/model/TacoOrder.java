@@ -5,6 +5,9 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -13,15 +16,18 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Table
 public class TacoOrder implements Serializable {
 
     @Serial
     private static final long serialVersionUID = -3654615007847796783L;
 
+    @Id
     private Long id;
 
     private Date placedAt;
 
+    @Column("customer_name")
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
 
